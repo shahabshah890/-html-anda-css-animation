@@ -1,0 +1,93 @@
+.main{
+    width: 200px;
+    height: 200px;
+    animation: ColorChange 5s 0s  infinite linear;
+    position: relative;
+}
+@keyframes ColorChange{
+    0%{
+        background: rgb(255, 0, 238);
+        left: 0px;
+        right: 0px;
+
+    }
+    25%{
+        background: rgb(51, 181, 246);
+        left: 300px;
+        top: 0;
+
+    }
+    50%{
+        background: rgb(98, 255, 14);
+        left: 300px;
+        top: 300px;
+
+    }
+    75%{
+        background: rgb(0, 0, 0);
+        left: 0px;
+        top: 300px;
+
+    }
+    100%{
+        background: darkblue;
+        left: 0px;
+        top: 0px;
+
+    }
+}
+.bus{
+    position: fixed;
+    bottom: 0px;
+    left: -200px;
+    animation: busLefttoRight 10s 0s infinite linear;
+}
+@keyframes busLefttoRight{
+    0%{
+        left: -200px;
+        
+    }
+    100%{
+        left: 120%;
+    }
+}
+
+button{
+    display: table;
+    margin: 40px  auto;
+    background: white;
+    border: 2px solid tomato;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 30px;
+    position: relative;
+
+}
+.wave{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 238, 0);
+    border-radius: 10px;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    animation: waveEffect 3s 0s infinite linear;
+}
+@keyframes waveEffect{
+    0%{
+        transform: scale(1,1);
+        opacity: 0;
+
+    }
+    50%{
+        transform: scale(1.5,1.5);
+        opacity: 0.5;
+
+    }
+    100%{
+        transform: scale(1,1);
+        opacity: 0;
+
+    }
+}
